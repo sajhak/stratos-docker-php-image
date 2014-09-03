@@ -1,0 +1,7 @@
+#!/bin/bash
+source /root/.bashrc
+/usr/local/bin/populate-user-data.sh
+export JAVA_HOME=/opt/java
+export PATH=$PATH:$JAVA_HOME/bin
+cd /mnt/apache-stratos-cartridge-agent/bin/;./stratos.sh > /tmp/agent.log
+/usr/sbin/apache2ctl -D FOREGROUND
