@@ -52,14 +52,17 @@ RUN mkdir -p /mnt/apache-stratos-cartridge-agent/payload
 #######################
 # ActiveMQ dependencies
 #######################
-ADD packs/activemq/*.zip /mnt/apache-stratos-cartridge-agent/lib
+ADD packs/activemq/activemq-broker-5.9.1.jar /mnt/apache-stratos-cartridge-agent/lib/activemq-broker-5.9.1.jar
+ADD packs/activemq/activemq-client-5.9.1.jar /mnt/apache-stratos-cartridge-agent/lib/activemq-client-5.9.1.jar
+ADD packs/activemq/geronimo-j2ee-management_1.1_spec-1.0.1.jar /mnt/apache-stratos-cartridge-agent/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+ADD packs/activemq/geronimo-jms_1.1_spec-1.1.1.jar /mnt/apache-stratos-cartridge-agent/lib/geronimo-jms_1.1_spec-1.1.1.jar
+ADD packs/activemq/hawtbuf-1.9.jar /mnt/apache-stratos-cartridge-agent/lib/hawtbuf-1.9.jar
+
+EXPOSE 22 80
 
 ###################
 # Setup run script
 ###################
-
-EXPOSE 22 80
-
 ADD run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 ADD files/populate-user-data.sh /usr/local/bin/populate-user-data.sh
