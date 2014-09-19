@@ -47,7 +47,8 @@ RUN unzip -q apache-stratos-cartridge-agent-4.0.0-SNAPSHOT.zip
 RUN rm apache-stratos-cartridge-agent-4.0.0-SNAPSHOT.zip
 RUN mv apache-stratos-cartridge-agent* apache-stratos-cartridge-agent
 RUN mkdir -p /mnt/apache-stratos-cartridge-agent/payload
-
+#RUN rm /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
+#ADD files/bin/stratos.sh /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
 
 #######################
 # ActiveMQ dependencies
