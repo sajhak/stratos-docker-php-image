@@ -42,13 +42,13 @@ RUN echo "export PATH=$PATH:/opt/java/bin" >> /root/.bashrc
 ##################
 WORKDIR /mnt/
 
-ADD packs/apache-stratos-cartridge-agent-4.0.0-SNAPSHOT.zip /mnt/apache-stratos-cartridge-agent-4.0.0-SNAPSHOT.zip
-RUN unzip -q apache-stratos-cartridge-agent-4.0.0-SNAPSHOT.zip
-RUN rm apache-stratos-cartridge-agent-4.0.0-SNAPSHOT.zip
+ADD packs/apache-stratos-cartridge-agent-4.1.0-SNAPSHOT.zip /mnt/apache-stratos-cartridge-agent-4.1.0-SNAPSHOT.zip
+RUN unzip -q apache-stratos-cartridge-agent-4.1.0-SNAPSHOT.zip
+RUN rm apache-stratos-cartridge-agent-4.1.0-SNAPSHOT.zip
 RUN mv apache-stratos-cartridge-agent* apache-stratos-cartridge-agent
 RUN mkdir -p /mnt/apache-stratos-cartridge-agent/payload
-#RUN rm /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
-#ADD files/bin/stratos.sh /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
+RUN rm /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
+ADD files/jndi.properties /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
 
 #######################
 # ActiveMQ dependencies
