@@ -28,8 +28,8 @@ ADD files/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 ##################
 # Install Java
 ##################
-ADD packs/jdk-7u7-linux-x64.tar.gz /opt/
-RUN ln -s /opt/jdk1.7.0_07 /opt/java
+ADD packs/jdk-7u4-linux-x64.tar.gz /opt/
+RUN ln -s /opt/jdk1.7.0_04 /opt/java
 
 RUN echo "export JAVA_HOME=/opt/java" >> /root/.bashrc
 RUN echo "export PATH=$PATH:/opt/java/bin" >> /root/.bashrc
