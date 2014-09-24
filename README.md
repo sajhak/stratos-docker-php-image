@@ -9,9 +9,10 @@ wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2F
 
 Download ActiveMQ
 -----------------
-Go to packs/activemq directory
-
 wget http://www.carfab.com/apachesoftware/activemq/5.9.1/apache-activemq-5.9.1-bin.tar.gz
+
+copy following jars in activemq/lib to packs/activemq directory             
+      activemq-broker-5.9.1.jar  activemq-client-5.9.1.jar  geronimo-j2ee-management_1.1_spec-1.0.1.jar  geronimo-jms_1.1_spec-1.1.1.jar  hawtbuf-1.9.jar
 
 
 Download cartridge agent to packs directory
