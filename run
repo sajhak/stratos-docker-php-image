@@ -2,8 +2,12 @@
 source /root/.bashrc
 /usr/local/bin/populate-user-data.sh
 
-sed -i "s/MB-IP/${MB_IP}/g" /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
-sed -i "s/MB-PORT/${MB_PORT}/g" /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
+#sed -i "s/MB-IP/${MB_IP}/g" /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
+#sed -i "s/MB-PORT/${MB_PORT}/g" /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
+
+sed -i "s/MB-IP/${MB_IP}/g" /mnt/apache-stratos-cartridge-agent/conf/mqtttopic.properties
+sed -i "s/MB-PORT/${MB_PORT}/g" /mnt/apache-stratos-cartridge-agent/conf/mqtttopic.properties
+
 sed -i "s/CEP-IP/${CEP_IP}/g" /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
 sed -i "s/CEP-PORT/${CEP_PORT}/g" /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
 
