@@ -51,7 +51,7 @@ RUN rm /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
 ADD files/jndi.properties /mnt/apache-stratos-cartridge-agent/conf/jndi.properties
 
 RUN rm /mnt/apache-stratos-cartridge-agent/conf/mqtttopic.properties
-ADD files/jndi.properties /mnt/apache-stratos-cartridge-agent/conf/mqtttopic.properties
+ADD files/mqtttopic.properties /mnt/apache-stratos-cartridge-agent/conf/mqtttopic.properties
 
 #######################
 # ActiveMQ dependencies
