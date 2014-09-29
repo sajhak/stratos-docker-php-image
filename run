@@ -13,5 +13,5 @@ sed -i "s/CEP-PORT/${CEP_PORT}/g" /mnt/apache-stratos-cartridge-agent/bin/strato
 
 export JAVA_HOME=/opt/java
 export PATH=$PATH:$JAVA_HOME/bin
-cd /mnt/apache-stratos-cartridge-agent/bin/;./stratos.sh > /tmp/agent.log
+cd /mnt/apache-stratos-cartridge-agent/bin/;./stratos.sh & > /tmp/agent.log
 /usr/sbin/apache2ctl -D FOREGROUND
