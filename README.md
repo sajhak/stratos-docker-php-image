@@ -17,6 +17,13 @@ copy following jars in activemq/lib to packs/activemq directory
 
 Download cartridge agent to packs directory
 
+Create the image
+----------------
+Go to stratos-docker-php-image directory
+Execute following command to create the image
+     docker build -t php-4.1.0-m1 .
+     
+
 Start a container
 ----------------
 Format of the docker run command with environment variables:
