@@ -5,6 +5,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update
 RUN apt-get install -y wget
+#stress
 
 WORKDIR /opt/
 
@@ -61,6 +62,11 @@ ADD packs/activemq/activemq-client-5.9.1.jar /mnt/apache-stratos-cartridge-agent
 ADD packs/activemq/geronimo-j2ee-management_1.1_spec-1.0.1.jar /mnt/apache-stratos-cartridge-agent/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
 ADD packs/activemq/geronimo-jms_1.1_spec-1.1.1.jar /mnt/apache-stratos-cartridge-agent/lib/geronimo-jms_1.1_spec-1.1.1.jar
 ADD packs/activemq/hawtbuf-1.9.jar /mnt/apache-stratos-cartridge-agent/lib/hawtbuf-1.9.jar
+
+####
+# Remove default index page
+####
+RUN rm -rf /var/www/html
 
 EXPOSE 22 80
 

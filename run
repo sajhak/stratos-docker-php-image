@@ -13,7 +13,7 @@ sed -i "s/CEP-PORT/${CEP_PORT}/g" /mnt/apache-stratos-cartridge-agent/bin/strato
 
 sed -i 's/CERT-TRUSTSTORE/${script_path}\/..\/security\/client-truststore.jks/g' /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
 sed -i "s/TRUSTSTORE-PASSWORD/wso2carbon/g" /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
-
+sed -i "s#APP_PATH=APP_PATH#APP_PATH=${APP_PATH}#g" /mnt/apache-stratos-cartridge-agent/bin/stratos.sh
 
 export JAVA_HOME=/opt/java
 export PATH=$PATH:$JAVA_HOME/bin
